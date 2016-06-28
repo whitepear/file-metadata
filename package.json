@@ -25,6 +25,7 @@
   "homepage": "https://github.com/whitepear/file_metadata#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "mongodb": "^2.1.18"
+    "mongodb": "^2.1.18",
+    "multer": "^1.1.0"
   }
 }
