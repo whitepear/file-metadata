@@ -1,12 +1,14 @@
 'use strict'
 var express = require('express');
 var multer = require('multer');
+var path = require('path');
 
 var app = express();
+app.use(express.static(path.join(__dirname, 'public')));
 var upload = multer();
 
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + '/index.html');  
+  res.sendFile(__dirname + '/public/index.html');  
 }); // end '/'
 
 app.post('/', upload.single('metaFile'), function (req, res){	
