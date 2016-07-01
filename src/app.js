@@ -1,10 +1,11 @@
-'use strict'
+'use strict';
 var express = require('express');
 var multer = require('multer');
 var path = require('path');
 
 var app = express();
 app.use(express.static(path.join(__dirname, 'public')));
+
 var upload = multer();
 
 app.get("/", function (req, res) {
