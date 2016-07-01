@@ -10,10 +10,13 @@ app.get("/", function (req, res) {
 }); // end '/'
 
 app.post('/', upload.single('metaFile'), function (req, res){	
-	// size 	Size of the file in bytes
-    console.log(req.body) // form fields
-    console.log(req.files) // form files
-    res.status(204).end()
+	console.log('Post request received.');
+	if (req.file) {
+		console.log('File exists.');
+		res.json({ size: req.file.size });
+	} else {
+		console.log('File not found.');
+	}
 });
 
 app.listen(3000, console.log('Server is running...'));
