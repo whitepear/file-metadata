@@ -1,7 +1,7 @@
 Project is live at: https://fcc-file.herokuapp.com/
 
-FreeCodeCamp coursework: https://www.freecodecamp.com/challenges/file-metadata-microservice
+An Express API that allows users to upload files in order to measure their size in bytes.
 
-Here are the specific user stories you should implement for this project:  
-User Story: I can submit a FormData object that includes a file upload.  
-User Story: When I submit something, I will receive the file size in bytes within the JSON response.
+The application consists of two routes, one GET and one POST. The application utilises the Multer middleware in order to implement file-upload functionality. API responds with JSON data.
+
+Note: The live application (linked above) is hosted on Heroku. Please allow a few seconds for the hosting server to wake up when attempting to view it.
